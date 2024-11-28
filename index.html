@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación del Equipo</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <div class="intro-container">
+    <div class="intro-content">
+      <h1>¡Hey, líder Data Science!🚀</h1>
+      <p>
+        Con esta herramienta, podrás evaluar el desempeño del equipo, identificar fortalezas y descubrir áreas de mejora clave. 
+      </p>
+      <button id="startEvaluation">Inicia Evaluación</button>
+    </div>
+  </div>
+
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <button class="close-btn" onclick="closePopup()">×</button>
+      <h2 id="section-title">Sección 1: Objetivos del equipo</h2>
+      <div id="questions-container"></div>
+      <button id="nextSection">Continuar</button>
+    </div>
+  </div>
+
+  <script src="static/script.js"></script>
+</body>
+</html>

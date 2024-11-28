@@ -1,0 +1,208 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background: 
+      radial-gradient(circle at top left, black, transparent),
+      radial-gradient(circle at bottom right, orange, transparent),
+      #4b0082;
+  color: white;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* Scrollable Elements */
+.scrollable {
+  overflow: auto;
+}
+
+/* Intro Section */
+.intro-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('background.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 50px;
+}
+
+.intro-content {
+  color: white;
+  text-align: left;
+  animation: fadeIn 1.5s ease-in-out;
+  background-color: rgba(50, 50, 50, 0.7);
+  width: 90vw;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+#startEvaluation {
+  margin-bottom: 20px; 
+  margin-left: 20px; 
+}
+
+/* Typography */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: rgba(255, 165, 0, 1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(226, 149, 6);
+}
+
+/* Popup Modal */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f3f3f3;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup-content {
+  background: rgb(39, 39, 39);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
+}
+
+.popup-content h2 {
+  margin-bottom: 20px;
+}
+
+.popup-content .slider-container {
+  margin-bottom: 20px;
+}
+
+.popup-content input[type="range"] {
+  width: 100%;
+}
+
+#section-title {
+  color: rgba(255, 166, 0, 0.801);
+}
+
+.popup-content button {
+  background-color: rgba(255, 166, 0, 0.801);
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: darkred;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Progress Bar */
+.progress-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #f3f3f3;
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 165, 0, 0.5);
+  transition: width 0.3s ease;
+}
+
+/* Slider Labels */
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.slider-labels span {
+  font-size: 12px;
+}
+
+/* Footer Section */
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-item {
+  text-align: center;
+}
+
+.university-logo img {
+  width: 220px;  
+  height: 250px;
+}
+
+.university-logo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-container {
+  text-align: center; 
+  margin-top: 20px;
+  margin-bottom: 20px; 
+}
