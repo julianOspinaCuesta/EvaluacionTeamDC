@@ -156,9 +156,9 @@ function getGeneralRecommendation(score) {
 function getRecommendationForSection(title, sectionScore) {
   const sectionIndex = sections.findIndex(section => section.title === title);
   larecomendation = sections[sectionIndex].recomendaciones;
-  if (sectionScore >= 90) {
+  if (sectionScore >= 12) {
     return larecomendation[0];
-  } else if (sectionScore >= 70) {
+  } else if (sectionScore >= 7) {
     return larecomendation[1];
   } else {
     return larecomendation[2];
@@ -197,7 +197,7 @@ function showSummary() {
         <p>Yamu Mena</p>
       </div>
       <div class="footer-item">
-        <a href="https://www.linkedin.com/in/estudiante2" target="_blank">
+        <a href="https://www.linkedin.com/in/milton-fabian-cifuentes-ortega/" target="_blank">
           <img src="static/linkedin-logo.png" alt="LinkedIn Logo" />
         </a>
         <p>Milton Cifuentes</p>
