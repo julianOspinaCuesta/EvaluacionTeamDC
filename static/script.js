@@ -92,6 +92,45 @@ const sections = [
       "Por mejorar: Crear un plan formal de retención, que incluya proyectos de interés personal y esquemas de reconocimiento.",
     ],
   },
+  {
+    title: "Sección 7: Habilidades y funciones",
+    questions: [
+      "¿El equipo de trabajo está conformado por personas adecuadas para sus funciones?",
+      "¿Sientes que los conocimientos técnicos fueron bien aplicados en el desarrollo de los modelos?",
+      "¿El equipo tiene una buena sinergia a nivel de desarrollos en conjunto?"
+    ],
+    recomendaciones: [
+      "Excelente: Mantener los estándares actuales, fomentar la especialización técnica y explorar proyectos colaborativos desafiantes que sigan desarrollando sinergias.",
+      "Bueno: Reforzar la capacitación técnica para potenciar la aplicación de conocimientos y consolidar dinámicas colaborativas en proyectos grupales.",
+      "Por mejorar: Evaluar las asignaciones de funciones, implementar un plan de capacitación técnica estructurado y actividades que fortalezcan la sinergia del equipo.",
+    ],
+  },
+  {
+    title: "Sección 8: Lineamientos del equipo",
+    questions: [
+      "¿El equipo desarrolla estrategias para priorizar las tareas y cumplir objetivos?",
+      "¿El equipo de trabajo tiene una buena interacción entre sus miembros?",
+      "¿El equipo está motivado para desarrollar los proyectos de la organización?",
+    ],
+    recomendaciones: [
+      "Excelente: Mantener las estrategias de priorización actuales y motivar al equipo con metas claras y proyectos alineados con los intereses de sus integrantes.",
+      "Bueno: Mejorar la planificación de tareas con herramientas ágiles y fomentar espacios de interacción para mantener la cohesión.",
+      "Por mejorar: Establecer lineamientos claros de priorización, implementar dinámicas para fortalecer la interacción y desarrollar programas que incentiven la motivación colectiva.",
+    ],
+  },
+  {
+    title: "Sección 9: Ambiente laboral",
+    questions: [
+      "¿Sientes que tus aportes e ideas han dado un valor agregado?",
+      "¿Recibes y brindas una retroalimentación a los procesos del modelo?",
+      "¿El ambiente laboral dentro del equipo es amable y cohesivo?",
+    ],
+    recomendaciones: [
+      "Excelente: Continuar promoviendo la retroalimentación constructiva y mantener un ambiente de trabajo colaborativo y valorador de ideas.",
+      "Bueno: Fomentar el intercambio de ideas y formalizar espacios regulares de retroalimentación estructurada.",
+      "Por mejorar: Diseñar mecanismos que den visibilidad al aporte individual, formalizar canales de retroalimentación y actividades para promover un ambiente laboral más cohesivo.",
+    ],
+  },
 
 ];
 
@@ -126,7 +165,7 @@ function loadSection() {
     questionContainer.classList.add('slider-container');
     questionContainer.innerHTML = `
       <p>${question}</p>
-      <input class="slider-ranges" type="range" min="0" max="5" value="3" id="question-${index}">
+      <input class="slider-ranges" type="range" min="0" max="5" value="0" id="question-${index}">
       <div class="slider-labels">${labelsHTML}</div>
     `;
     questionsContainer.appendChild(questionContainer);
@@ -143,7 +182,7 @@ function saveScores() {
 // Función para obtener la recomendación general basada en el puntaje
 function getGeneralRecommendation(score) {
   console.log(score)
-  if (score >= 90) {
+  if (score >= 100) {
     return recomendacion_general[0];
   } else if (score >= 70) {
     return recomendacion_general[1];
